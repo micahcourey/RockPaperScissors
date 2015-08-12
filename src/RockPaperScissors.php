@@ -9,13 +9,13 @@
 
             //Validate the user input by making a counter that counts the number of valid weapons.
             $weapons = array("rock", "paper", "scissors");
+            $player_weapons = array($input1, $input2);
             $validate = 0;
             foreach ($weapons as $weapon) {
-                if ($weapon == $input1) {
-                    $validate = $validate + 1;
-                }
-                if ($weapon == $input2) {
-                    $validate = $validate + 1;
+                foreach ($player_weapons as $player) {
+                    if ($weapon == $player) {
+                        $validate = $validate + 1;
+                    }
                 }
             }
             if ($validate < 2) {
