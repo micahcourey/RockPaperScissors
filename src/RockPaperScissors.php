@@ -8,27 +8,26 @@
 
             if (!($input1 == "rock" || $input1 == "scissors" || $input1 == "paper" || $input2 == "rock" || $input2 == "scissors" || $input2 == "paper")) {
                 return "Someone didn't enter a valid weapon!";
-
             } else {
                 $rockpaperscissors = array(
-                    "rock, scissors" => "Player one wins!",
-                    "scissors, paper" => "Player one wins!",
-                    "paper, rock" => "Player one wins!",
-                    "scissors, rock" => "Player two wins!",
-                    "paper, scissors" => "Player two wins!",
-                    "rock, paper" => "Player two wins!",
-                    "rock, rock" => "It's a tie!",
-                    "paper, paper" => "It's a tie!",
-                    "scissors, scissors" => "It's a tie"
+                    "rock" => array(
+                        "rock" => "It's a tie!",
+                        "paper" => "Player two wins!",
+                        "scissors" => "Player one wins!"
+                    ),
+                    "paper" => array(
+                        "rock" => "Player one wins!",
+                        "paper" => "It's a tie!",
+                        "scissors" => "Player two wins!"
+                    ),
+                    "scissors" => array(
+                        "rock" => "Player two wins!",
+                        "paper" => "Player one wins!",
+                        "scissors" => "It's a tie!"
+                    )
                 );
-
-                $string = $input1 . ", " . $input2;
-                return $rockpaperscissors[$string];
+                return $rockpaperscissors[$input1][$input2];
             }
-
         }
     }
 ?>
-<!-- array(['rock', 'paper', 'scissors'],
-      ['rock', 'paper', 'scissors'],
-      ['rock', 'paper', 'scissors']); -->
