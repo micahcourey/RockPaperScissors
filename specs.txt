@@ -1,0 +1,36 @@
+Rock, Paper, Scissors Specs
+
+Behavior: When player one enters rock and player 2 enters scissors, return Player One.
+Input1: Rock
+Input2: Scissors
+Output: Player one
+
+Behavior: When player one enters scissors and player two enters paper, return Player One.
+Input1: Scissors
+Input2: Paper
+Output: Player one
+
+Behavior: When player one enters paper and player two enters rock, return Player one
+Input1: Paper
+Input2: Rock
+Output: Player one
+
+Behavior: When player one enters scissors and player 2 enters rock, return Player Two.
+Input1: Scissors
+Input2: Rock
+Output: Player two
+
+Behavior: When player one enter paper and player two enter scissors, return Player Two.
+Input1: Paper
+Input2: Scissors
+Output: Player two
+
+Behavior: When player one enters rock and player two enters paper, return Player Two.
+Input1: Rock
+Input2: Paper
+Output: Player two
+
+Behavior: When player one and player two enter the same thing, it's a tie
+Input1: Rock
+Input2: Rock
+Output: Tie
