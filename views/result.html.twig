@@ -8,7 +8,9 @@
         <div class='container'>
             <header>
                 <h1>Rock, paper, scissors</h1>
-                <h3>{{ result }}</h3>
+                {% for result in results %}
+                    <h3>{{ result }}</h3>
+                {% endfor %}
             </header>
             <a href='/'>
                 <div class='btn-danger button'>

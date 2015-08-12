@@ -4,6 +4,8 @@
 
     $app = new Silex\Application();
 
+    $app['debug'] = true;
+
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
         'twig.path' => __DIR__.'/../views'
     ));
@@ -15,7 +17,12 @@
     $app->get("/result", function() use ($app) {
         $game = new RockPaperScissors;
         $game_result = $game->playRockPaperScissors($_GET['input1'], $_GET['input2']);
-        return $app['twig']->render('result.html.twig', array('result' => $game_result));
+        $input1 = $_GET['input1'];
+        $input2 = $_GET['input2'];
+        $weapons = "Player one chose $input1 and player two chose $input2.";
+        $game_results = array();
+        array_push($game_results, $game_result, $weapons);
+        return $app['twig']->render('result.html.twig', array('results' => $game_results));
     });
 
     return $app;
