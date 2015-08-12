@@ -1,5 +1,10 @@
 Rock, Paper, Scissors Specs
 
+Behavior: Change inputs to lower case
+input1: ROCK
+input2: SciSsOrs
+Output: Player one
+
 Behavior: When player one enters rock and player 2 enters scissors, return Player One.
 Input1: Rock
 Input2: Scissors
