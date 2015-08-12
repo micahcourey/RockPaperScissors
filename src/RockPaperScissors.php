@@ -3,10 +3,20 @@
     {
         function playRockPaperScissors($input1, $input2)
         {
+            //Lowercase the user inputs.
             $input1 = strtolower($input1);
             $input2 = strtolower($input2);
 
-            if (!($input1 == "rock" || $input1 == "scissors" || $input1 == "paper" || $input2 == "rock" || $input2 == "scissors" || $input2 == "paper")) {
+            //Validate the user input by making a counter that counts the number of valid weapons.
+            //$weapons contains two of every 'weapon' to account for tie scenarios.
+            $weapons = array("rock", "paper", "scissors", "rock", "paper", "scissors");
+            $validate = 0;
+            foreach ($weapons as $weapon) {
+                if (($weapon == $input1) || ($weapon == $input2)) {
+                    $validate = $validate + 1;
+                }
+            }
+            if ($validate < 2) {
                 return "Someone didn't enter a valid weapon!";
             } else {
                 $rockpaperscissors = array(
