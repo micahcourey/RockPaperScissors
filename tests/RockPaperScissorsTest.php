@@ -16,7 +16,7 @@
             $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
 
             //Assert
-            $this->assertEquals("Player one", $result);
+            $this->assertEquals("Player one wins!", $result);
         }
 
         function test_input_case()
@@ -30,7 +30,7 @@
             $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
 
             //Assert
-            $this->assertEquals("Player one", $result);
+            $this->assertEquals("Player one wins!", $result);
         }
 
         function test_scissors_paper()
@@ -44,7 +44,7 @@
             $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
 
             //Assert
-            $this->assertEquals("Player one", $result);
+            $this->assertEquals("Player one wins!", $result);
         }
 
         function test_paper_rock()
@@ -58,7 +58,7 @@
             $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
 
             //Assert
-            $this->assertEquals("Player one", $result);
+            $this->assertEquals("Player one wins!", $result);
         }
 
         function test_scissors_rock()
@@ -72,7 +72,7 @@
             $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
 
             //Assert
-            $this->assertEquals("Player two", $result);
+            $this->assertEquals("Player two wins!", $result);
         }
 
         function test_paper_scissors()
@@ -86,7 +86,7 @@
             $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
 
             //Assert
-            $this->assertEquals("Player two", $result);
+            $this->assertEquals("Player two wins!", $result);
         }
 
         function test_rock_paper()
@@ -100,7 +100,21 @@
             $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
 
             //Assert
-            $this->assertEquals("Player two", $result);
+            $this->assertEquals("Player two wins!", $result);
+        }
+
+        function test_tie()
+        {
+            //Arrange
+            $test_RockPaperScissors = new RockPaperScissors;
+            $input1 = "rock";
+            $input2 = "rock";
+
+            //Act
+            $result = $test_RockPaperScissors->playRockPaperScissors($input1, $input2);
+
+            //Assert
+            $this->assertEquals("It's a tie!", $result);
         }
 
     }
