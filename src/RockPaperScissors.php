@@ -8,11 +8,13 @@
             $input2 = strtolower($input2);
 
             //Validate the user input by making a counter that counts the number of valid weapons.
-            //$weapons contains two of every 'weapon' to account for tie scenarios.
-            $weapons = array("rock", "paper", "scissors", "rock", "paper", "scissors");
+            $weapons = array("rock", "paper", "scissors");
             $validate = 0;
             foreach ($weapons as $weapon) {
-                if (($weapon == $input1) || ($weapon == $input2)) {
+                if ($weapon == $input1) {
+                    $validate = $validate + 1;
+                }
+                if ($weapon == $input2) {
                     $validate = $validate + 1;
                 }
             }
