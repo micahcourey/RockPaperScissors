@@ -13,7 +13,11 @@
             } elseif (($input1 == "paper") && ($input2 == "rock")) {
                 return "Player one";
             } elseif (($input1 == "scissors") && ($input2 == "rock")) {
-                return "Player two";     
+                return "Player two";
+            } elseif (($input1 == "paper") && ($input2 == "scissors")) {
+                return "Player two";
+            } elseif (($input1 == "rock") && ($input2 == "paper")) {
+                return "Player two";        
             } else {
                 return "Tie";
             }
