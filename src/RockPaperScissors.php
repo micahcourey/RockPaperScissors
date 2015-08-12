@@ -6,21 +6,20 @@
             $input1 = strtolower($input1);
             $input2 = strtolower($input2);
 
-            if (($input1 == "rock") && ($input2 == "scissors")) {
-                return "Player one wins!";
-            } elseif (($input1 == "scissors") && ($input2 == "paper")) {
-                return "Player one wins!";
-            } elseif (($input1 == "paper") && ($input2 == "rock")) {
-                return "Player one wins!";
-            } elseif (($input1 == "scissors") && ($input2 == "rock")) {
-                return "Player two wins!";
-            } elseif (($input1 == "paper") && ($input2 == "scissors")) {
-                return "Player two wins!";
-            } elseif (($input1 == "rock") && ($input2 == "paper")) {
-                return "Player two wins!";
-            } else {
-                return "It's a tie!";
-            }
+            $rockpaperscissors = array(
+                "rock, scissors" => "Player one wins!",
+                "scissors, paper" => "Player one wins!",
+                "paper, rock" => "Player one wins!",
+                "scissors, rock" => "Player two wins!",
+                "paper, scissors" => "Player two wins!",
+                "rock, paper" => "Player two wins!",
+                "rock, rock" => "It's a tie!",
+                "paper, paper" => "It's a tie!",
+                "scissors, scissors" => "It's a tie"
+            );
+
+            $string = $input1 . ", " . $input2;
+            return $rockpaperscissors[$string];
         }
     }
 ?>
